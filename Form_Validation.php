@@ -43,12 +43,12 @@
         }
         if (empty($_POST["phoneNo"])) {
 
-            $phoneErr = "Enter a valid Phone Number";
+            $phoneErr = "Enter valid phone number";
         }
            $phoneNo = $_POST ["phoneNo"];  
-         if (!preg_match ("/^[0-9]*$/", $phoneNo) ){  
-          $phoneErr = "Only numeric value is allowed.";
-        
+             if (!preg_match ("/^[0-9]*$/", $phoneNo) ){  
+              $phoneErr = "Only numeric value is allowed.";
+          
           
          echo $phoneErr;  
            } else {  
@@ -120,6 +120,8 @@
             $gender = test_input($_POST["gender"]);
 
         }
+
+       
         if(empty($_POST["dob"])){
         
             $dobErr ="Please Enter your date of birth";
@@ -129,8 +131,11 @@
         {
             $dob = test_input($_POST["dob"]);
         }
+    
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+       
 
             if (empty($_POST["address"])) {
     
@@ -155,7 +160,7 @@
 
     
 
-        }
+        
 
         function test_input($data) {
 
@@ -171,7 +176,7 @@
 
     ?>
 
-    <h2>PHP Form Validation Example</h2>
+    <h2>PHP Form Validation</h2>
 
      <p><span class="error"></span></p> 
 
@@ -213,7 +218,7 @@
         <br><br>
 
         DateOfBirth:
-        <input type="date" name="d" value="<?php echo date ('d-m-Y') ?>"> <br><br>
+        <input type="date" name="dob"> <span class="error">*<?php echo date ('d-m-Y') ?></span > <br><br>
 
 
 
@@ -260,8 +265,8 @@
 
         echo $gender;
         echo "<br>";
-
-        echo $dob=($_POST["dob"]);
+        
+        echo $dob;
 
         echo "<br>";
 
