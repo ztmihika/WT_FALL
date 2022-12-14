@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Example Form Validation</title>
+    <style>
+        div{
+            background-color: gray;
+            width: 500px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+        <h1>Form Validation</h1>
+        User Name: <input type="text" id="username" name="" value=""><br><br>
+		Password: <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+        <input type="submit" id="submit" name="submit" value="submit" onclick="getName()"><br><br>
+        <div id="d1">Must contain 8 character.</div>
+
+        <script>
+			
+            let student = ['alamin', 12, 'alamin@aiub.edu'];
+            
+            // function abc(){
+            // }
+            // let f1 = function(){
+
+            // }
+            //let f3 = (a,b)=>a+b;
+            //console.log('test');
+            //alert(d);
+            //document.write('this is test ..');
+
+            function test(){
+                document.getElementsByTagName('h1')[0].innerHTML = "testj";
+            }
+
+            function getName(){
+                let username = document.getElementById('username').value;
+                if(username == ""){ 
+					alert("Null User name");
+					
+                }else{
+                    document.getElementsByTagName('h1')[0].innerHTML = username;
+                    document.getElementById('d1').style.left = "10px";
+                }
+
+            }
+            
+        </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+
+    background:linear-gradient(rgb(10 10 10 / 0.65),rgb(10 10 10 / 0.65));
+   
+}
+
+
+.contain {
+    width: 650px;
+    height: 1050px;
+    background: linear-gradient(rgb(9 9 9 / 0.65),rgb(9 9 9 / 0.65));
+    position: absolute;
+    transform: translate(55%,2%);
+    border-radius: 10px;
+    padding: 50px 30px;
+}
+
+.contain h3{
+    color: antiquewhite;
+}
+
+.contain h4{
+    color: snow;
+}
+
+.contain legend {
+    width: 220px;
+    text-align: center;
+    padding-left: 170px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bolder;
+    color: wheat;
+}
+
+.contain input {
+    width: 200px;
+    height: 28px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    background: transparent;
+    border-bottom-width: 2px;
+    border-bottom-color: antiquewhite;
+    border-top: none;
+    border-left: none;
+    color: snow;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    outline: none;
+    
+}
+
+    .contain input:focus {
+        outline:none;
+    }
+
+
+::placeholder {
+    color: snow;
+    font-family: Arial;
+}
+
+p {
+    font-family: Arial;
+    font-size: 17px;
+    padding-top: 10px;
+    text-align:left;
+    color: wheat;
+    font-weight:bold;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+    position: center;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 10px 15px;
+    background: transparent;
+    border: none;
+    margin-top: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}

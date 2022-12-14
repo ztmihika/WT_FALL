@@ -1,0 +1,54 @@
+<?php
+	session_start();
+?>
+<html>
+<head>
+	<title>Admin List | Admin</title>
+</head>
+<body>
+<br><br>
+		<table border="1">
+			<tr>
+				<td>Name</td>
+				<td>Email</td>
+				<td>Contact Number</td>
+				<td>Address</td>
+				<td>Division</td>
+				<td>Postal Code</td>
+				<td>Gender</td>
+				<td>Date of birth</td>
+				<td>Blood Group</td>
+				<td>CV</td>
+				<td>Picture</td>
+			</tr>
+<?php
+		$file = fopen('admin.txt', 'r');
+			
+		while(!feof($file)){
+
+		$data = fgets($file);
+		$admin = explode('|', $data);
+        if( $admin[0] != null && $admin[2] != null && $admin[3] != null && $admin[4] != null && $admin[5] != null && $admin[6] != null && $admin[7] != null && $admin[8] != null && $admin[9] != null && $admin[10] != null && $admin[11] != null)
+		{
+?>
+			<tr>
+				<td><?=$admin[0]?></td>
+				<td><?=$admin[2]?></td>
+				<td><?=$admin[3]?></td>
+				<td><?=$admin[4]?></td>
+				<td><?=$admin[5]?></td>
+				<td><?=$admin[6]?></td>
+				<td><?=$admin[7]?></td>
+				<td><?=$admin[8]?></td>
+				<td><?=$admin[9]?></td>
+				<td><?=$admin[10]?></td>
+				<td><?=$admin[11]?></td>
+			</tr>
+<?php
+		}
+		}
+?>
+			
+		</table>	
+</body>
+</html>
